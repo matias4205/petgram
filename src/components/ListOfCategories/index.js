@@ -1,32 +1,46 @@
 import React, { useState, useEffect } from 'react'
 
-import { Category } from '../Category'
+import { Category, CategorySkeleton } from '../Category'
 import { List, Item } from './styles'
 
-export const ListOfCategories = () => {
+const useCategories = () => {
   const [categories, setCategories] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     window.fetch('https://petgram-api-delta.vercel.app/categories')
       .then(res => res.json())
       .then((response) => {
         setCategories(response)
+        setLoading(false)
       })
   }, [])
 
-  const renderList = (isFixed = false) => (
-    <List className={isFixed ? 'fixed' : ''}>
-      {
+  return { categories, loading }
+}
+
+export const ListOfCategories = () => {
+  const { categories, loading } = useCategories()
+
+  const renderList = ({ isFixed = false, loading }) => (
+    <List>
+      {!loading ? (
         categories.map((category) => (
           <Item key={category.id}>
             <Category {...category} />
           </Item>
         ))
-      }
+      ) : (
+        [1, 2, 3, 4, 5, 6, 7, 8].map((key) => (
+          <Item key={key}>
+            <CategorySkeleton key={key} />
+          </Item>
+        ))
+      )}
     </List>
   )
 
   return (
-    renderList()
+    renderList({ loading })
   )
 }
