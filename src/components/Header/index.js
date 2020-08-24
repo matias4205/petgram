@@ -1,11 +1,13 @@
 import React from 'react'
 
+import { HeaderWrapper } from './syles'
+
 import { Logo } from '../Logo'
 
 export const Header = () => {
   return (
-    <div>
-      <Logo />
-    </div>
+    <HeaderWrapper>
+      <Logo style={{ height: '100%' }} />
+    </HeaderWrapper>
   )
 }
