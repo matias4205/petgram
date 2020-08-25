@@ -32,4 +32,9 @@ export const Button = styled.button`
 `
 export const Article = styled.article`
   min-height: 300px;
+  margin-bottom: 20px;
+`
+
+export const ControlsContainer = styled.div`
+  padding: 0px 10px;
 `

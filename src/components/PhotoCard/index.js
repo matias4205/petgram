@@ -4,7 +4,7 @@ import { MdFavoriteBorder, MdFavorite } from 'react-icons/md'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { useNearScreen } from '../../hooks/useNearScreen'
 
-import { ImgWrapper, Img, Button, Article } from './styles'
+import { ImgWrapper, Img, Button, Article, ControlsContainer } from './styles'
 
 const DEFAULT_IMAGE =
   'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
@@ -25,10 +25,12 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
               <Img src={src} alt='image' />
             </ImgWrapper>
           </a>
-          <Button onClick={() => setLiked(!liked)}>
-            {LikeIcon}
-            {likes} likes!
-          </Button>
+          <ControlsContainer>
+            <Button onClick={() => setLiked(!liked)}>
+              {LikeIcon}
+              {likes} likes!
+            </Button>
+          </ControlsContainer>
         </>
       )}
     </Article>

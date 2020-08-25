@@ -21,6 +21,7 @@ const typeDefs = gql`
     likes: Int
     liked: Boolean
     userId: ID
+    username: String
   }
 
   type Category {

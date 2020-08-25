@@ -2,7 +2,7 @@ import React from 'react'
 
 import { GlobalStyle } from './styles/GlobalStyles'
 import { ListOfCategories } from './components/ListOfCategories'
-import { ListOfPhotoCards } from './components/ListOfPhotoCards'
+import { ListOfPhotoCards } from './container/ListOfPhotoCards'
 import { Header } from './components/Header'
 import { Content } from './components/Content'
 
@@ -13,7 +13,7 @@ const App = () => {
       <Header />
       <Content>
         <ListOfCategories />
-        <ListOfPhotoCards />
+        <ListOfPhotoCards categoryId={2} />
       </Content>
     </>
   )

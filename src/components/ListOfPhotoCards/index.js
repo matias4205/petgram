@@ -3,10 +3,10 @@ import React from 'react'
 import { ListWrapper } from './styles'
 import { PhotoCard } from '../PhotoCard'
 
-export const ListOfPhotoCards = () => {
+export const ListOfPhotoCardsComponent = ({ data: { photos = [] } }) => {
   return (
     <ListWrapper>
-      {[1, 2, 3, 5, 6, 7].map(id => <PhotoCard id={id} key={id} />)}
+      {photos.map(photo => <PhotoCard key={photo.id} {...photo} />)}
     </ListWrapper>
   )
 }
