@@ -5,7 +5,7 @@ export const Anchor = styled.a`
   flex-direction: column;
   text-align: center;
   text-decoration: none;
-  width: 75px;
+  width: 60px;
 `
 
 export const Image = styled.img`
@@ -15,8 +15,8 @@ export const Image = styled.img`
   height: auto;
   overflow: hidden;
   object-fit: cover;
-  height: 75px;
-  width: 75px;
+  height: 60px;
+  width: 60px;
 `
 
 export const SkeletonWrapper = styled.div`
@@ -24,14 +24,14 @@ export const SkeletonWrapper = styled.div`
   flex-direction: column;
   text-align: center;
   text-decoration: none;
-  width: 75px;
+  width: 60px;
 `
 
 export const ImageSkeleton = styled.div`
   border: 1px solid #ddd;
   box-shadow: 0px 10px 14px rgba(0,0,0,.2);
   border-radius: 50%;
-  height: 75px;
-  width: 75px;
+  height: 60px;
+  width: 60px;
   background-color: #EAEAEA;
 `

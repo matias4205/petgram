@@ -42,4 +42,8 @@ export const GlobalStyle = createGlobalStyle`
   a:active {
     color: inherit;
   }
+
+  :root {
+    --soft-gray: #E8E8E8;
+  }
 `

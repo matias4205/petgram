@@ -14,7 +14,7 @@ export const PhotoCard = ({ id, username, likes = 0, src = DEFAULT_IMAGE }) => {
   const [show, ref] = useNearScreen()
   const [liked, setLiked] = useLocalStorage(key, false)
 
-  const LikeIcon = liked ? <MdFavorite size='32px' /> : <MdFavoriteBorder size='32px' />
+  const LikeIcon = liked ? <MdFavorite size='25px' /> : <MdFavoriteBorder size='25px' />
 
   return (
     <Article ref={ref}>
@@ -24,7 +24,7 @@ export const PhotoCard = ({ id, username, likes = 0, src = DEFAULT_IMAGE }) => {
             <ProfileImgPlaceholder />
             <ProfileUsername>{username}</ProfileUsername>
           </ProfileContainer>
-          <a href={`/detail/${id}`}>
+          <a href={`?detailId=${id}`}>
             <ImgWrapper>
               <Img src={src} alt='image' />
             </ImgWrapper>

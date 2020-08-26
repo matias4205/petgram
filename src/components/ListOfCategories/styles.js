@@ -9,6 +9,7 @@ export const List = styled.ul`
   display: flex;
   overflow: scroll;
   width: 100%;
+  border-bottom: 1px solid var(--soft-gray)
 `
 
 export const Item = styled.li`

@@ -42,7 +42,6 @@ export const ProfileContainer = styled.span`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-top: 1px solid #e8e8e8;
 `
 
 export const ProfileImgPlaceholder = styled.div`

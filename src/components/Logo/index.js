@@ -3,7 +3,7 @@ import { Svg } from './styles'
 
 export const Logo = props => (
   <Svg
-    viewBox='56.613 13.989 386.775 122.021'
+    viewBox='70.613 13.989 405.775 124.021'
     style={{
       background: '0 0'
     }}
