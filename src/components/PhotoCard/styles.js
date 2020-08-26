@@ -24,7 +24,6 @@ export const Img = styled.img`
 export const Button = styled.button`
   display: flex;
   align-items: center;
-  padding-top: 8px;
 
   & svg {
     margin-right: 4px;
@@ -32,9 +31,28 @@ export const Button = styled.button`
 `
 export const Article = styled.article`
   min-height: 300px;
-  margin-bottom: 20px;
 `
 
 export const ControlsContainer = styled.div`
-  padding: 0px 10px;
+  padding: 10px 10px;
+`
+
+export const ProfileContainer = styled.span`
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 1px solid #e8e8e8;
+`
+
+export const ProfileImgPlaceholder = styled.div`
+  border-radius: 50%;
+  background-color: #BDBDBD;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+`
+
+export const ProfileUsername = styled.a`
+  font-weight: 600;
 `

@@ -28,4 +28,18 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     padding-bottom: 10px;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:visited {
+    color: inherit;
+  }
+  a:hover {
+    color: inherit;
+  }
+  a:active {
+    color: inherit;
+  }
 `

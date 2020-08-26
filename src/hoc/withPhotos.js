@@ -6,6 +6,7 @@ query getPhotos($cateogoryId: ID) {
   photos(categoryId: $cateogoryId) {
     id
     categoryId
+    username
     src
     likes
     userId
