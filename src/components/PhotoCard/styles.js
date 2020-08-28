@@ -47,3 +47,17 @@ export const ProfileImgPlaceholder = styled.div`
 export const ProfileUsername = styled.a`
   font-weight: 600;
 `
+
+export const ProfileUsernameSkeleton = styled.span`
+  height: 16px;
+  width: 100px;
+  border-radius: 4px;
+  background-color: #BDBDBD;
+`
+
+export const ImgSkeleton = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: #BDBDBD;
+  min-height: 280px;
+`

@@ -7,7 +7,9 @@ import { Logo } from '../Logo'
 export const Header = () => {
   return (
     <HeaderWrapper>
-      <Logo style={{ height: '100%' }} />
+      <a href='/'>
+        <Logo style={{ height: '100%' }} />
+      </a>
     </HeaderWrapper>
   )
 }
