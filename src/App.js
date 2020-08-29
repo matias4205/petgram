@@ -1,34 +1,28 @@
 import React from 'react'
+import { Router } from '@reach/router'
 
 import { GlobalStyle } from './styles/GlobalStyles'
-import { ListOfCategories } from './components/ListOfCategories'
-import { ListOfPhotoCards } from './container/ListOfPhotoCards'
 import { Header } from './components/Header'
 import { Content } from './components/Content'
-import { PhotoCardWithQuery } from './container/PhotoCardWithQuery'
-import { ErrorMessage } from './components/ErrorMessage'
+import { NavBar } from './components/NavBar'
+
+import { Detail } from './pages/Detail'
+import { Home } from './pages/Home'
+// import { ErrorMessage } from './components/ErrorMessage'
 
 const App = () => {
-  const urlParams = new window.URLSearchParams(window.location.search)
-  const detailId = urlParams.get('detailId')
-
   return (
     <>
       <GlobalStyle />
       <Header />
-      <ErrorMessage message='El post no existe' />
       <Content>
-        {
-          detailId ? (
-            <PhotoCardWithQuery id={detailId} />
-          ) : (
-            <>
-              <ListOfCategories />
-              <ListOfPhotoCards />
-            </>
-          )
-        }
+        <Router>
+          <Home path='/' />
+          <Home path='/pet/:categoryId' />
+          <Detail path='/detail/:detailId' />
+        </Router>
       </Content>
+      <NavBar />
     </>
   )
 }

@@ -24,7 +24,7 @@ export const PhotoCardWithQuery = ({ id }) => {
     <Query query={GET_SINGLE_PHOTO} variables={{ id }}>
       {
         ({ loading, error, data = { photo: {} } }) => {
-          return (loading || error) ? <PhotoCardSkeleton /> : <PhotoCard {...data.photo} />
+          return (loading || error) ? <PhotoCardSkeleton /> : <PhotoCard {...data.photo} isDetail />
         }
       }
     </Query>

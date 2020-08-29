@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { Link as LinkRouter } from '@reach/router'
 
-export const Anchor = styled.a`
+export const Link = styled(LinkRouter)`
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -28,10 +29,9 @@ export const SkeletonWrapper = styled.div`
 `
 
 export const ImageSkeleton = styled.div`
-  border: 1px solid #ddd;
   box-shadow: 0px 10px 14px rgba(0,0,0,.2);
   border-radius: 50%;
   height: 60px;
   width: 60px;
-  background-color: #EAEAEA;
+  background-color: var(--dark-gray);
 `

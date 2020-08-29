@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   button { background: transparent; border: 0; outline: 0 }
 
   body {
-    background: #fefefe;
+    background: #F5F5F5;
     height: 100vh;
     margin: 0 auto;
     max-width: 500px;
@@ -31,19 +31,10 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: inherit;
-  }
-  a:visited {
-    color: inherit;
-  }
-  a:hover {
-    color: inherit;
-  }
-  a:active {
-    color: inherit;
   }
 
   :root {
     --soft-gray: #E8E8E8;
+    --dark-gray: #BDBDBD;
   }
 `

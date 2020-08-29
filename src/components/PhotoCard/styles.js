@@ -38,13 +38,13 @@ export const ProfileContainer = styled.span`
 
 export const ProfileImgPlaceholder = styled.div`
   border-radius: 50%;
-  background-color: #BDBDBD;
+  background-color: var(--dark-gray);
   width: 25px;
   height: 25px;
   margin-right: 10px;
 `
 
-export const ProfileUsername = styled.a`
+export const ProfileUsername = styled.span`
   font-weight: 600;
 `
 
@@ -52,12 +52,12 @@ export const ProfileUsernameSkeleton = styled.span`
   height: 16px;
   width: 100px;
   border-radius: 4px;
-  background-color: #BDBDBD;
+  background-color: var(--dark-gray);
 `
 
 export const ImgSkeleton = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #BDBDBD;
+  background-color: var(--dark-gray);
   min-height: 280px;
 `
