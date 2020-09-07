@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { slideIn } from '../../styles/animation'
+
 export const ErrorContainer = styled.div`
   width: 100%;
   padding: 20px 15px;
@@ -15,4 +17,9 @@ export const CloseButton = styled.span`
 export const ErrorText = styled.p`
   color: #FFF;
   font-weight: 600;
+`
+
+export const ErrorWrapper = styled.div`
+  ${slideIn()}
+  overflow: hidden;
 `

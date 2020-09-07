@@ -12,21 +12,22 @@ export const GlobalStyle = createGlobalStyle`
 
   ul, li, h1, h2, h3, p, button { margin: 0; padding: 0; }
   ul { list-style: none; }
-  button { background: transparent; border: 0; outline: 0 }
+  button { background: transparent; border: 0; outline: 0; }
 
   body {
-    background: #F5F5F5;
+    background: var(--soda-orange);
     height: 100vh;
     margin: 0 auto;
     max-width: 500px;
     overscroll-behavior: none;
-    width: 100%; 
+    width: 100%;
   }
 
   #app {
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     min-height: 100vh;
     padding-bottom: 10px;
+    background: var(--soft-white);
   }
 
   a {
@@ -36,5 +37,7 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --soft-gray: #E8E8E8;
     --dark-gray: #BDBDBD;
+    --soft-white: #F5F5F5;
+    --soda-orange: #F55536;
   }
 `

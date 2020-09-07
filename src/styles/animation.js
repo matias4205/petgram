@@ -3,6 +3,9 @@ import { css, keyframes } from 'styled-components'
 export const fadeIn = ({ time = '1s', type = 'ease' } = {}) =>
   css`animation: ${time} ${fadeInKeyframes} ${type};`
 
+export const slideIn = ({ time = '1s', type = 'ease' } = {}) =>
+  css`animation: ${time} ${slideInKeyFrames} ${type};`
+
 const fadeInKeyframes = keyframes`
   from {
     filter: blur(5px);
@@ -12,5 +15,15 @@ const fadeInKeyframes = keyframes`
   to {
     filter: blur(0);
     opacity: 1;
+  }
+`
+
+// Won't push content down, change to height
+const slideInKeyFrames = keyframes`
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
   }
 `
