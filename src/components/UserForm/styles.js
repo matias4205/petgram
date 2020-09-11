@@ -6,8 +6,7 @@ export const FormTitle = styled.h1`
 `
 
 export const Form = styled.form`
-  padding: 20px;
-  padding-top: 40px;
+  margin-top: 20px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -20,6 +19,14 @@ export const Input = styled.input`
   background: #FAFAFA;
   margin-bottom: 1.5rem;
   font-size: 16px;
+`
+
+export const Container = styled.div`
+  padding: 20px;
+`
+
+export const ErrorMessage = styled.p`
+  color: var(--scarlet-red);
 `
 
 export const RegisterMessage = styled.p`
@@ -40,4 +47,8 @@ export const Button = styled.button`
   font-weight: 600;
   font-size: 14px;
   margin-top: 1.5rem;
+
+  &[disabled] {
+    opacity: .7;
+  }
 `

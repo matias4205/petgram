@@ -43,5 +43,6 @@ export const GlobalStyle = createGlobalStyle`
     --gradient-orange: #FF8C00;
     --soft-blue: #2592F2;
     --soft-black: #232327;
+    --scarlet-red: #F32013;
   }
 `
