@@ -35,9 +35,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
+    --soft-white: #FEFEFE;
     --soft-gray: #E8E8E8;
     --dark-gray: #BDBDBD;
-    --soft-white: #F5F5F5;
+    --gradient-violet: #B500B5;
     --soda-orange: #F55536;
+    --gradient-orange: #FF8C00;
+    --soft-blue: #2592F2;
+    --soft-black: #232327;
   }
 `

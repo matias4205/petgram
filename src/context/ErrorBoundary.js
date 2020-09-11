@@ -5,7 +5,7 @@ import { ErrorMessage } from '../components/ErrorMessage'
 const ErrorContext = createContext({})
 
 const ErrorProvider = ({ children }) => {
-  const [errorState, setState] = useState({ error: true, message: 'LALALALALA' })
+  const [errorState, setState] = useState({ error: false, message: '' })
 
   const state = errorState
 

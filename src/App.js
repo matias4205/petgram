@@ -12,11 +12,8 @@ import { Favs } from './pages/Favs'
 import { User } from './pages/User'
 import { NotRegisteredUser } from './pages/NotRegisteredUser'
 import { Provider as ErrorProvider } from './context/ErrorBoundary'
+import UserContext from './context/UserContext'
 // import { ErrorMessage } from './components/ErrorMessage'
-
-const UserLogged = ({ children }) => {
-  return children({ isAuth: false })
-}
 
 const App = () => {
   return (
@@ -30,7 +27,7 @@ const App = () => {
             <Home path='/pet/:categoryId' />
             <Detail path='/detail/:detailId' />
           </Router>
-          <UserLogged>
+          <UserContext.Consumer>
             {({ isAuth }) => (
               <Router>
                 {isAuth ? (
@@ -46,7 +43,7 @@ const App = () => {
                 )}
               </Router>
             )}
-          </UserLogged>
+          </UserContext.Consumer>
         </ErrorProvider>
       </Content>
       <NavBar />
