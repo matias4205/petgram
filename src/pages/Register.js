@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { navigate } from '@reach/router'
 
 import { Context } from '../context/UserContext'
 import { RegisterForm } from '../components/RegisterForm'
@@ -17,6 +18,7 @@ export const Register = () => {
             register({ variables }).then(({ data }) => {
               const { signup } = data
               activateAuth(signup)
+              navigate('/')
             })
           }
 

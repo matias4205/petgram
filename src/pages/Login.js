@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { navigate } from '@reach/router'
 
 import { Context } from '../context/UserContext'
 import { LoginForm } from '../components/LoginForm'
@@ -17,7 +18,7 @@ export const Login = () => {
             login({ variables }).then(({ data }) => {
               const { login } = data
               activateAuth(login)
-              window.location.pathname = '/'
+              navigate('/')
             })
           }
 

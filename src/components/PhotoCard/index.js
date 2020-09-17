@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from '@reach/router'
 
-import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { useNearScreen } from '../../hooks/useNearScreen'
 
 import {
@@ -21,10 +20,8 @@ import { ToggleLikeMutation } from '../../container/ToggleLikeMutation'
 const DEFAULT_IMAGE =
   'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
 
-export const PhotoCard = ({ id, src = DEFAULT_IMAGE, username, likes = 0, isDetail }) => {
-  const key = `like-${id}`
+export const PhotoCard = ({ id, src = DEFAULT_IMAGE, username, likes = 0, liked, isDetail }) => {
   const [show, ref] = useNearScreen()
-  const [liked, setLiked] = useLocalStorage(key, false)
 
   return (
     <Article ref={ref}>
@@ -49,13 +46,11 @@ export const PhotoCard = ({ id, src = DEFAULT_IMAGE, username, likes = 0, isDeta
             <ToggleLikeMutation>
               {(toggleLike) => {
                 const handleFavClick = () => {
-                  !liked &&
-                    toggleLike({
-                      variables: {
-                        input: { id }
-                      }
-                    })
-                  setLiked(!liked)
+                  toggleLike({
+                    variables: {
+                      input: { id }
+                    }
+                  })
                 }
 
                 return (
