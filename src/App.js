@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router } from '@reach/router'
+import { Router, Redirect } from '@reach/router'
 
 import { GlobalStyle } from './styles/GlobalStyles'
 import { Header } from './components/Header'
@@ -10,10 +10,10 @@ import { Detail } from './pages/Detail'
 import { Home } from './pages/Home'
 import { Favs } from './pages/Favs'
 import { User } from './pages/User'
-import { NotRegisteredUser } from './pages/NotRegisteredUser'
+import { Login } from './pages/Login'
+import { Register } from './pages/Register'
 import { Provider as ErrorProvider } from './context/ErrorBoundary'
 import UserContext from './context/UserContext'
-// import { ErrorMessage } from './components/ErrorMessage'
 
 const App = () => {
   return (
@@ -26,6 +26,8 @@ const App = () => {
             <Home path='/' />
             <Home path='/pet/:categoryId' />
             <Detail path='/detail/:detailId' />
+            <Login path='/login' />
+            <Register path='/register' />
           </Router>
           <UserContext.Consumer>
             {({ isAuth }) => (
@@ -37,8 +39,8 @@ const App = () => {
                   </>
                 ) : (
                   <>
-                    <NotRegisteredUser path='/favs' />
-                    <NotRegisteredUser path='/user' />
+                    <Redirect from='/user' to='/login' />
+                    <Redirect from='/favs' to='/login' />
                   </>
                 )}
               </Router>
