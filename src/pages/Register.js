@@ -4,6 +4,7 @@ import { navigate } from '@reach/router'
 import { Context } from '../context/UserContext'
 import { RegisterForm } from '../components/RegisterForm'
 import { RegisterMutation } from '../container/RegisterMutation'
+import { RegisterHeader } from '../components/RegisterHeader'
 
 export const Register = () => {
   const { activateAuth } = useContext(Context)
@@ -24,7 +25,12 @@ export const Register = () => {
 
           const errorMsg = error && 'El usuario ya existe o hay algun problema.'
 
-          return <RegisterForm title='Registrarse' disabled={loading} error={errorMsg} onSubmit={onSubmit} />
+          return (
+            <>
+              <RegisterHeader />
+              <RegisterForm title='Registrarse' disabled={loading} error={errorMsg} onSubmit={onSubmit} />
+            </>
+          )
         }
       }
     </RegisterMutation>

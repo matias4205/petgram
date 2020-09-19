@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react'
+
 export const Context = createContext()
 
 const Provider = ({ children }) => {
@@ -11,6 +12,10 @@ const Provider = ({ children }) => {
     activateAuth: (token) => {
       setIsAuth(true)
       window.sessionStorage.setItem('token', token)
+    },
+    removeAuth: () => {
+      setIsAuth(false)
+      window.sessionStorage.removeItem('token')
     }
   }
 

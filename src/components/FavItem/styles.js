@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { Link as LinkRouter } from '@reach/router'
 
+import { opacityGlow } from '../../styles/animation'
+
 export const Link = styled(LinkRouter)`
   display: block;
   position: relative;
@@ -43,6 +45,7 @@ export const FavImage = styled.img`
 `
 
 export const Skeleton = styled.div`
+  ${opacityGlow()}
   display: block;
   width: 100%;
   max-width: 300px;

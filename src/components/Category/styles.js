@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { Link as LinkRouter } from '@reach/router'
 
+import { opacityGlow } from '../../styles/animation'
+
 export const Link = styled(LinkRouter)`
   display: flex;
   flex-direction: column;
@@ -29,6 +31,7 @@ export const SkeletonWrapper = styled.div`
 `
 
 export const ImageSkeleton = styled.div`
+  ${opacityGlow()}
   box-shadow: 0px 10px 14px rgba(0,0,0,.2);
   border-radius: 50%;
   height: 60px;

@@ -1,10 +1,5 @@
 import styled from 'styled-components'
 
-export const FormTitle = styled.h1`
-  color: var(--soft-black);
-  margin-bottom: 2.5rem;
-`
-
 export const Form = styled.form`
   margin-top: 20px;
   height: 100%;
@@ -23,6 +18,7 @@ export const Input = styled.input`
 
 export const Container = styled.div`
   padding: 20px;
+  padding-top: 0;
 `
 
 export const ErrorMessage = styled.p`
@@ -41,7 +37,7 @@ export const RegisterMessage = styled.p`
 
 export const Button = styled.button`
   height: 46px;
-  background: linear-gradient(to left, #B500B5, #FF8C00);
+  background: linear-gradient(to left, var(--gradient-violet), var(--gradient-orange));
   border-radius: 6px;
   color: white;
   font-weight: 600;

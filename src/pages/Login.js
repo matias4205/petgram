@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { navigate } from '@reach/router'
 
 import { Context } from '../context/UserContext'
+import { LoginHeader } from '../components/LoginHeader'
 import { LoginForm } from '../components/LoginForm'
 import { LoginMutation } from '../container/LoginMutation'
 
@@ -24,7 +25,12 @@ export const Login = () => {
 
           const errorMsg = error && 'La contraseña es incorrecta o el usuario no existe'
 
-          return <LoginForm title='Iniciar sesion' disabled={loading} error={errorMsg} onSubmit={onSubmit} />
+          return (
+            <>
+              <LoginHeader />
+              <LoginForm title='Iniciar sesion' disabled={loading} error={errorMsg} onSubmit={onSubmit} />
+            </>
+          )
         }
       }
     </LoginMutation>

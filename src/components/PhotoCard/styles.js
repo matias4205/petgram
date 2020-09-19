@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { fadeIn } from '../../styles/animation'
+import { fadeIn, opacityGlow } from '../../styles/animation'
 
 export const ImgWrapper = styled.div`
   display: block;
@@ -50,6 +50,7 @@ export const ProfileUsername = styled.span`
 `
 
 export const ProfileUsernameSkeleton = styled.span`
+  ${opacityGlow()}
   height: 16px;
   width: 100px;
   border-radius: 4px;
@@ -57,6 +58,7 @@ export const ProfileUsernameSkeleton = styled.span`
 `
 
 export const ImgSkeleton = styled.div`
+  ${opacityGlow()}
   height: 100%;
   width: 100%;
   background-color: var(--dark-gray);

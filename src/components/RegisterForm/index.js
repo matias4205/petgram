@@ -3,7 +3,7 @@ import { Link } from '@reach/router'
 
 import { useInputValue } from '../../hooks/useInputValue'
 
-import { Button, Input, Form, LoginMessage, FormTitle, ErrorMessage, Container } from './styles'
+import { Button, Input, Form, LoginMessage, ErrorMessage, Container } from './styles'
 
 export const RegisterForm = ({ title, error, disabled, onSubmit }) => {
   const email = useInputValue('')
@@ -17,7 +17,6 @@ export const RegisterForm = ({ title, error, disabled, onSubmit }) => {
   return (
     <Container>
       <Form onSubmit={handleSubmit}>
-        <FormTitle>{title}</FormTitle>
         <Input type='email' placeholder='Email' {...email} disabled={disabled} />
         <Input type='password' placeholder='Password' {...password} disabled={disabled} />
         {error && <ErrorMessage>{error}</ErrorMessage>}

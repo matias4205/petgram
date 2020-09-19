@@ -6,6 +6,9 @@ export const fadeIn = ({ time = '1s', type = 'ease' } = {}) =>
 export const slideIn = ({ time = '1s', type = 'ease' } = {}) =>
   css`animation: ${time} ${slideInKeyFrames} ${type};`
 
+export const opacityGlow = ({ time = '1s', type = 'ease' } = {}) =>
+  css`animation: ${time} ${opacityGlowKeyFrames} ${type} infinite;`
+
 const fadeInKeyframes = keyframes`
   from {
     filter: blur(5px);
@@ -25,5 +28,17 @@ const slideInKeyFrames = keyframes`
   }
   to {
     transform: translateY(0);
+  }
+`
+
+const opacityGlowKeyFrames = keyframes`
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
   }
 `

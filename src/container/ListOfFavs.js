@@ -17,7 +17,7 @@ const GET_FAVS = gql`
 `
 
 export const FavsWithQuery = () => (
-  <Query query={GET_FAVS} fetchPolicy='cache-and-network'>
+  <Query query={GET_FAVS} fetchPolicy='network-only'>
     {ListOfFavsComponent}
   </Query>
 )
