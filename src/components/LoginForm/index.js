@@ -23,7 +23,7 @@ export const LoginForm = ({ title, error, disabled, onSubmit }) => {
     <Container>
       <Banner>
         <BannerText>
-          Tenemos una cuenta de prueba 😉.
+          Hey! Tenemos una cuenta de prueba 😉. &nbsp;
         </BannerText>
         <TestAccButton onClick={setTestAcc}>
           Quiero usarla!

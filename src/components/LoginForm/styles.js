@@ -34,7 +34,6 @@ export const BannerText = styled.p`
 
 export const TestAccButton = styled.button`
   display: inline-block;
-  margin-left: .5rem;
   font-size: 16px;
   font-family: var(--font-family);
   font-weight: 600;
