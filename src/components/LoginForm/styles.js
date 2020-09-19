@@ -21,6 +21,26 @@ export const Container = styled.div`
   padding-top: 0;
 `
 
+export const Banner = styled.div`
+  padding: 14px;
+  background-color: var(--soft-gray);
+  border-radius: 6px;
+  color: 
+`
+
+export const BannerText = styled.p`
+  display: inline;
+`
+
+export const TestAccButton = styled.button`
+  display: inline-block;
+  margin-left: .5rem;
+  font-size: 16px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  text-decoration: underline;
+`
+
 export const ErrorMessage = styled.p`
   color: var(--scarlet-red);
 `

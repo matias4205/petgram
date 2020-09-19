@@ -3,7 +3,7 @@ import { Link } from '@reach/router'
 
 import { useInputValue } from '../../hooks/useInputValue'
 
-import { Button, Input, Form, RegisterMessage, ErrorMessage, Container } from './styles'
+import { Button, Input, Form, RegisterMessage, ErrorMessage, Container, Banner, BannerText, TestAccButton } from './styles'
 
 export const LoginForm = ({ title, error, disabled, onSubmit }) => {
   const email = useInputValue('')
@@ -14,8 +14,22 @@ export const LoginForm = ({ title, error, disabled, onSubmit }) => {
     onSubmit({ email: email.value, password: password.value })
   }
 
+  const setTestAcc = () => {
+    email.setValue('test@gmail.com')
+    password.setValue('1234')
+  }
+
   return (
     <Container>
+      <Banner>
+        <BannerText>
+          Hey! Tenemos una cuenta de prueba 😉.
+        </BannerText>
+        <TestAccButton onClick={setTestAcc}>
+          Quiero usarla!
+        </TestAccButton>
+      </Banner>
+
       <Form onSubmit={handleSubmit}>
         <Input type='email' placeholder='Email' {...email} disabled={disabled} />
         <Input type='password' placeholder='Password' {...password} disabled={disabled} />
@@ -23,7 +37,7 @@ export const LoginForm = ({ title, error, disabled, onSubmit }) => {
         <Button disabled={disabled}>{title}</Button>
       </Form>
 
-      <RegisterMessage>¿No tenes una cuenta? <Link to='/register'>Registrate</Link></RegisterMessage>
+      <RegisterMessage>¿No tenés una cuenta? <Link to='/register'>Registrate</Link></RegisterMessage>
     </Container>
   )
 }

@@ -23,7 +23,7 @@ export const RegisterForm = ({ title, error, disabled, onSubmit }) => {
         <Button disabled={disabled}>{title}</Button>
       </Form>
 
-      <LoginMessage>¿Ya tenes una cuenta? <Link to='/login'>Inicia sesión</Link></LoginMessage>
+      <LoginMessage>¿Ya tenés una cuenta? <Link to='/login'>Inicia sesión</Link></LoginMessage>
     </Container>
   )
 }
