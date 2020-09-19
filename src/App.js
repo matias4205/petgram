@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Router, Redirect } from '@reach/router'
 
 import { GlobalStyle } from './styles/GlobalStyles'
@@ -13,9 +13,11 @@ import { User } from './pages/User'
 import { Login } from './pages/Login'
 import { Register } from './pages/Register'
 import { Provider as ErrorProvider } from './context/ErrorBoundary'
-import UserContext from './context/UserContext'
+import { Context as UserContext } from './context/UserContext'
 
 const App = () => {
+  const { isAuth } = useContext(UserContext)
+
   return (
     <>
       <GlobalStyle />
@@ -28,24 +30,12 @@ const App = () => {
             <Detail path='/detail/:detailId' />
             <Login path='/login' />
             <Register path='/register' />
+            {!isAuth && <Redirect from='/user' to='/login' />}
+            {!isAuth && <Redirect from='/favs' to='/login' />}
+
+            <User path='/user' />
+            <Favs path='/favs' />
           </Router>
-          <UserContext.Consumer>
-            {({ isAuth }) => (
-              <Router>
-                {isAuth ? (
-                  <>
-                    <User path='/user' />
-                    <Favs path='/favs' />
-                  </>
-                ) : (
-                  <>
-                    <Redirect from='/user' to='/login' />
-                    <Redirect from='/favs' to='/login' />
-                  </>
-                )}
-              </Router>
-            )}
-          </UserContext.Consumer>
         </ErrorProvider>
       </Content>
       <NavBar />
