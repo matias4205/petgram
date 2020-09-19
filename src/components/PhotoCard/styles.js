@@ -46,6 +46,7 @@ export const ProfileImgPlaceholder = styled.div`
 
 export const ProfileUsername = styled.span`
   font-weight: 600;
+  font-size: 15px;
 `
 
 export const ProfileUsernameSkeleton = styled.span`

@@ -12,10 +12,10 @@ export const ErrorContainer = styled.div`
 export const CloseButton = styled.span`
   font-size: 1.5rem;
   line-height: 1;
-  color: #FFF;
+  color: var(--white);
 `
 export const ErrorText = styled.p`
-  color: #FFF;
+  color: var(--white);
   font-weight: 600;
 `
 

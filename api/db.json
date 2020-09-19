@@ -1,13 +1,10 @@
 {
   "users": [
     {
-      "id": "7ec3d2f0-641e-11e9-9d5d-1b8ad05606d1",
-      "password": "$2y$10$/hWEYj0IJObSlRkTias15uAEMg5zgfpm3i0byBBgN/2FpTnWcfbSe",
-      "favs": [
-        "18",
-        "1"
-      ],
-      "avatar": "https://gravatar.com/avatar/8e04be7dab487d77f16969fd3e0d45d4",
+      "id": "097ef460-f901-11ea-a15f-7323a881d9e7",
+      "password": "$2b$10$ki9YCm6/Zvxx/ppmp0Xe.ebG9JmDxBEcpWs8bRXX6itVcnUSPEzuK",
+      "favs": [],
+      "avatar": "https://gravatar.com/avatar/1aedb8d9dc4751e229a335e371db8058",
       "email": "test@gmail.com"
     }
   ],
