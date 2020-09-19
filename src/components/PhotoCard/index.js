@@ -32,7 +32,7 @@ export const PhotoCard = ({ id, src = DEFAULT_IMAGE, username, likes = 0, liked,
             <ProfileUsername>{username}</ProfileUsername>
           </ProfileContainer>
           {isDetail ? (
-            <ImgWrapper>
+            <ImgWrapper onDoubleClick={() => console.log('aaaaaaaaaa')}>
               <Img src={src} alt='image' />
             </ImgWrapper>
           ) : (

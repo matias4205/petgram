@@ -91,6 +91,7 @@ export const GlobalStyle = createGlobalStyle`
     --soft-blue: #2592F2;
     --soft-black: #232327;
     --scarlet-red: #F32013;
+    --tart-orange: #FF483C;
     --black: #000;
     --white: #FFF;
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
