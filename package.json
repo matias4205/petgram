@@ -27,7 +27,8 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "standard": "^14.3.4",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "workbox-webpack-plugin": "^5.1.4"
   },
   "scripts": {
     "dev": "webpack-dev-server --history-api-fallback",

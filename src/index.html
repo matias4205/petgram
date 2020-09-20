@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Petgram</title>
 </head>
 <body>
@@ -12,5 +13,18 @@
       This page needs JavaScript to be executed. Please 
     </h3>
   </noscript>
+  <script>
+    if('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then((registration) => {
+            console.log('SW: Registered succesfully')
+          })
+          .catch((err) => {
+            console.log('SW: Not able to register | ', err)
+          })
+      })
+    }
+  </script>
 </body>
 </html>
