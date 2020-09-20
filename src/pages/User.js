@@ -5,7 +5,7 @@ import { Button } from '../components/Button'
 import { Container } from '../components/Container'
 import { Layout } from '../components/Layout'
 
-export const User = () => {
+export default () => {
   const { removeAuth } = useContext(Context)
 
   return (

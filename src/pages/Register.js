@@ -7,7 +7,7 @@ import { RegisterMutation } from '../container/RegisterMutation'
 import { RegisterHeader } from '../components/RegisterHeader'
 import { Layout } from '../components/Layout'
 
-export const Register = () => {
+export default () => {
   const { activateAuth } = useContext(Context)
 
   return (

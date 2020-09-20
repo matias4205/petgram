@@ -7,7 +7,7 @@ import { LoginHeader } from '../components/LoginHeader'
 import { LoginForm } from '../components/LoginForm'
 import { LoginMutation } from '../container/LoginMutation'
 
-export const Login = () => {
+export default () => {
   const { activateAuth } = useContext(Context)
 
   return (

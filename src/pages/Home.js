@@ -14,4 +14,4 @@ const HomePage = ({ categoryId }) => {
 }
 
 // Memoriza el componente si el categoryId es igual al anterior
-export const Home = React.memo(HomePage, (prevProps, props) => prevProps.categoryId === props.categoryId)
+export default React.memo(HomePage, (prevProps, props) => prevProps.categoryId === props.categoryId)
