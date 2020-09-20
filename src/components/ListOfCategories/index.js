@@ -19,7 +19,7 @@ const useCategories = () => {
   return { categories, loading }
 }
 
-export const ListOfCategories = () => {
+export const ListOfCategoriesComponent = () => {
   const { categories, loading } = useCategories()
 
   const renderList = ({ isFixed = false, loading }) => (
@@ -44,3 +44,5 @@ export const ListOfCategories = () => {
     renderList({ loading })
   )
 }
+
+export const ListOfCategories = React.memo(ListOfCategoriesComponent)

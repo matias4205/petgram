@@ -4,7 +4,7 @@ import { ListOfCategories } from '../components/ListOfCategories'
 import { ListOfPhotoCards } from '../container/ListOfPhotoCards'
 import { Layout } from '../components/Layout'
 
-export const Home = ({ categoryId }) => {
+const HomePage = ({ categoryId }) => {
   return (
     <Layout title='' description=''>
       <ListOfCategories />
@@ -12,3 +12,6 @@ export const Home = ({ categoryId }) => {
     </Layout>
   )
 }
+
+// Memoriza el componente si el categoryId es igual al anterior
+export const Home = React.memo(HomePage, (prevProps, props) => prevProps.categoryId === props.categoryId)

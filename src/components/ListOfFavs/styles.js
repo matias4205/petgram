@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Grid = styled.ul`
   display: grid;
   grid-gap: 2px;
-  grid-template-columns: repeat(auto-fill,minmax(145px,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(130px,1fr));
 `
 
 export const EmptyMessage = styled.p`

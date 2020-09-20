@@ -31,7 +31,8 @@
   "scripts": {
     "dev": "webpack-dev-server --history-api-fallback",
     "build": "webpack",
-    "lint": "standard"
+    "lint": "standard",
+    "serve:dev": "webpack --mode development && npx serve -s dist"
   },
   "repository": {
     "type": "git",
