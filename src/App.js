@@ -32,8 +32,8 @@ const App = () => {
             <Detail path='/detail/:detailId' />
             <Login path='/login' />
             <Register path='/register' />
-            {!isAuth && <Redirect from='/user' to='/login' />}
-            {!isAuth && <Redirect from='/favs' to='/login' />}
+            {!isAuth && <Redirect from='/user' to='/login' noThrow />}
+            {!isAuth && <Redirect from='/favs' to='/login' noThrow />}
 
             <User path='/user' />
             <Favs path='/favs' />
